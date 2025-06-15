@@ -14,29 +14,29 @@ int main(void) {
   int invalid_option = 0;
 
   while (1) {
-    // Clean up the screen.
+    // * Clean up the screen.
     clear_screen();
     add_new_line();
     add_new_line();
 
-    // Show the app description.
+    // * Show the app description.
     app_description();
     add_new_line();
     add_new_line();
 
-    // Show the error message.
+    // * Show the error message.
     if (invalid_option) {
       app_option_error();
       add_new_line();
       add_new_line();
     }
 
-    // Show the app options.
+    // * Show the app options.
     app_options();
     add_new_line();
     add_new_line();
 
-    // Ask the user for their input.
+    // * Ask the user for their input.
     option = app_option();
 
     if (option == 5) {

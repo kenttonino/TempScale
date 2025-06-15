@@ -1,5 +1,4 @@
 #include "../displays/ansi_color_codes.h"
-#include "../displays/clear_screen.h"
 #include "../displays/escape_sequence.h"
 
 void fahrenheit_description(void) {
