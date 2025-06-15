@@ -1,4 +1,4 @@
-name: TempScale (develop)
+name: develop
 
 on:
   push:
