@@ -21,13 +21,13 @@ void kelvin_option(void) {
 
     // * Display the error message.
     if (invalid_input) {
-      add_new_tab();
+      add_new_tab(1);
       printf(" %sInvalid input. Please try again.%s", RED, RESET);
       add_new_line(2);
     }
 
     // * Ask the input.
-    add_new_tab();
+    add_new_tab(1);
     printf(" Kelvin (°K)         : ");
     scanf("%s", kelvin_string);
     fgets(garbage_buffer, 50, stdin);
@@ -46,27 +46,27 @@ void kelvin_option(void) {
 
     // * Handle computation for celsius scale.
     double celsius = kelvin_double - 273.15;
-    add_new_tab();
+    add_new_tab(1);
     printf(" %sCelsius (°C)%s        : %s%.4lf (°C)%s ", BLUE, RESET, YELLOW,
            celsius, RESET);
     add_new_line(1);
 
     // * Handle computation for fahrenheit scale.
     double fahrenheit = (kelvin_double - 273.15) * (9.0 / 5.0) + 32;
-    add_new_tab();
+    add_new_tab(1);
     printf(" %sFahrenheit (°F)%s     : %s%.4lf (°F)%s", BLUE, RESET, YELLOW,
            fahrenheit, RESET);
     add_new_line(1);
 
     // * Handle computation for rankine scale.
     double rankine = kelvin_double * 1.8;
-    add_new_tab();
+    add_new_tab(1);
     printf(" %sRankine (°R)%s        : %s%.4lf (°R)%s", BLUE, RESET, YELLOW,
            rankine, RESET);
     add_new_line(2);
 
     // * Ask user if want to try again.
-    add_new_tab();
+    add_new_tab(1);
     printf(" Try again (1-yes, 0-no): ");
     scanf("%d", &try_again);
     fgets(garbage_buffer, 50, stdin);
