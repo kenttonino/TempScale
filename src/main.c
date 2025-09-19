@@ -16,25 +16,21 @@ int main(void) {
   while (1) {
     // * Clean up the screen.
     clear_screen();
-    add_new_line();
-    add_new_line();
+    add_new_line(2);
 
     // * Show the app description.
     app_description();
-    add_new_line();
-    add_new_line();
+    add_new_line(2);
 
     // * Show the error message.
     if (invalid_option) {
       app_option_error();
-      add_new_line();
-      add_new_line();
+      add_new_line(2);
     }
 
     // * Show the app options.
     app_options();
-    add_new_line();
-    add_new_line();
+    add_new_line(2);
 
     // * Ask the user for their input.
     option = app_option();
@@ -65,7 +61,6 @@ int main(void) {
     break;
   }
 
-  add_new_line();
-  add_new_line();
+  add_new_line(2);
   return 0;
 }
