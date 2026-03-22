@@ -79,4 +79,8 @@ void celsius_option(void) {
       break;
     }
   }
+
+  // Free the allocated memory.
+  free(celsius_string);
+  free(garbage_buffer);
 }
