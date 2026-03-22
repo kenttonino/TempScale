@@ -1,12 +1,11 @@
-#include "../displays/ansi_color_codes.h"
-#include "../displays/escape_sequence.h"
+#include "../../utils/utils.h"
 
-void celsius_description(void) {
+void kelvin_description(void) {
   add_new_tab(1);
   printf("%s--------------------------------------------------%s", BLUE, RESET);
   add_new_line(2);
   add_new_tab(2);
-  printf("   %sCelsius (°C) to Other Scale%s", GREEN, RESET);
+  printf("    %sKelvin (°K) to Other Scale%s", GREEN, RESET);
   add_new_line(2);
   add_new_tab(1);
   printf("%s--------------------------------------------------%s", BLUE, RESET);

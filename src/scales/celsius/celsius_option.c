@@ -1,8 +1,6 @@
-#include "../displays/ansi_color_codes.h"
-#include "../displays/clear_screen.h"
-#include "../displays/escape_sequence.h"
-#include "celsius_description.h"
-#include "check_valid_input.h"
+#include "../../utils/utils.h"
+#include "./celsius_description.c"
+#include "../check_valid_input.h"
 
 void celsius_option(void) {
   char *celsius_string = malloc(sizeof(char) * 50);
@@ -12,7 +10,7 @@ void celsius_option(void) {
 
   while (1) {
     // * Clean up the terminal.
-    clear_screen();
+    clear_terminal();
     add_new_line(2);
 
     // * Display the option description.
@@ -47,22 +45,19 @@ void celsius_option(void) {
     // * Handle computation for fahrenheit.
     double fahrenheit = ((9.0 / 5.0) * celsius_double) + 32;
     add_new_tab(1);
-    printf(" %sFahrenheit (°F)%s  : %s%.4lf (°F)%s ", BLUE, RESET, YELLOW,
-           fahrenheit, RESET);
+    printf(" %sFahrenheit (°F)%s  : %s%.4lf (°F)%s ", BLUE, RESET, YELLOW, fahrenheit, RESET);
     add_new_line(1);
 
     // * Handle computation for kelvbin
     double kelvin = celsius_double + 273.15;
     add_new_tab(1);
-    printf(" %sKelvin (°K)%s      : %s%.4lf (°K)%s", BLUE, RESET, YELLOW,
-           kelvin, RESET);
+    printf(" %sKelvin (°K)%s      : %s%.4lf (°K)%s", BLUE, RESET, YELLOW, kelvin, RESET);
     add_new_line(1);
 
     // * Handle computation for rankine.
     double rankine = celsius_double * (9.0 / 5.0) + 491.67;
     add_new_tab(1);
-    printf(" %sRankine (°R)%s     : %s%.4lf (°R)%s", BLUE, RESET, YELLOW,
-           rankine, RESET);
+    printf(" %sRankine (°R)%s     : %s%.4lf (°R)%s", BLUE, RESET, YELLOW, rankine, RESET);
     add_new_line(2);
 
     // * Ask user if want to try again.
@@ -79,4 +74,8 @@ void celsius_option(void) {
       break;
     }
   }
+
+  // Free the allocated memory.
+  free(celsius_string);
+  free(garbage_buffer);
 }

@@ -1,5 +1,5 @@
-#ifndef KELVIN_OPTION_H
-#define KELVIN_OPTION_H
+#ifndef KELVIN_H
+#define KELVIN_H
 #include "kelvin_option.c"
 
 extern void kelvin_option(void);

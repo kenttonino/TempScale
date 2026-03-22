@@ -1,5 +1,4 @@
-#include "ansi_color_codes.h"
-#include "escape_sequence.h"
+#include "../utils/utils.h"
 
 void app_option_error(void) {
   add_new_tab(1);

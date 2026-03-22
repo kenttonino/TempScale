@@ -1,0 +1,18 @@
+#ifndef UTILS_H
+#define UTILS_H
+#include "clear_terminal.c"
+#include "add_new_line.c"
+#include "add_new_tab.c"
+
+extern void add_new_line(int num_lines);
+extern void add_new_tab(int num_tabs);
+extern void clear_terminal(void);
+
+// ASCII color codes.
+#define BLUE "\033[0;34m"
+#define GREEN "\033[0;32m"
+#define YELLOW "\033[0;33m"
+#define RED "\033[0;31m"
+#define RESET "\033[0m"
+
+#endif

@@ -24,21 +24,3 @@ make run
 # Run the CLI tool with GNU Debugger.
 make debug
 ```
-
-<br />
-<br />
-
-
-
-## Installation
-
-```sh
-# If already installed.
-sudo snap refresh tempscale
-
-# If not yet installed.
-sudo snap install tempscale
-
-# If want to remove.
-sudo snap remove tempscale
-```

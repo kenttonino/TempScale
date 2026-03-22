@@ -1,8 +1,6 @@
-#include "../displays/ansi_color_codes.h"
-#include "../displays/clear_screen.h"
-#include "../displays/escape_sequence.h"
-#include "check_valid_input.h"
-#include "rankine_description.h"
+#include "../../utils/utils.h"
+#include "../check_valid_input.h"
+#include "rankine_description.c"
 
 void rankine_option(void) {
   char *rankine_string = malloc(sizeof(char) * 50);
@@ -12,7 +10,7 @@ void rankine_option(void) {
 
   while (1) {
     // * Clean up the terminal.
-    clear_screen();
+    clear_terminal();
     add_new_line(2);
 
     // * Display the option description.
@@ -47,22 +45,19 @@ void rankine_option(void) {
     // * Handle computation for celsius scale.
     double celsius = (rankine_double - 491.67) * (5.0 / 9.0);
     add_new_tab(1);
-    printf(" %sCelsius (°C)%s         : %s%.4lf (°C)%s ", BLUE, RESET, YELLOW,
-           celsius, RESET);
+    printf(" %sCelsius (°C)%s         : %s%.4lf (°C)%s ", BLUE, RESET, YELLOW, celsius, RESET);
     add_new_line(1);
 
     // * Handle computation for fahrenheit scale.
     double fahrenheit = rankine_double - 459.67;
     add_new_tab(1);
-    printf(" %sFahrenheit (°F)%s      : %s%.4lf (°F)%s", BLUE, RESET, YELLOW,
-           fahrenheit, RESET);
+    printf(" %sFahrenheit (°F)%s      : %s%.4lf (°F)%s", BLUE, RESET, YELLOW, fahrenheit, RESET);
     add_new_line(1);
 
     // * Handle computation for kelvin scale.
     double kelvin = rankine_double * (5.0 / 9.0);
     add_new_tab(1);
-    printf(" %sKelvin (°K)%s          : %s%.4lf (°K)%s", BLUE, RESET, YELLOW,
-           kelvin, RESET);
+    printf(" %sKelvin (°K)%s          : %s%.4lf (°K)%s", BLUE, RESET, YELLOW, kelvin, RESET);
     add_new_line(2);
 
     // * Ask user if want to try again.

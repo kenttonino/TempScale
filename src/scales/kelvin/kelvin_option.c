@@ -1,22 +1,20 @@
-#include "../displays/ansi_color_codes.h"
-#include "../displays/clear_screen.h"
-#include "../displays/escape_sequence.h"
-#include "check_valid_input.h"
-#include "fahrenheit_description.h"
+#include "../../utils/utils.h"
+#include "../check_valid_input.h"
+#include "kelvin_description.c"
 
-void fahrenheit_option(void) {
-  char *fahrenheit_string = malloc(sizeof(char) * 50);
+void kelvin_option(void) {
+  char *kelvin_string = malloc(sizeof(char) * 50);
   int invalid_input = 0;
   char *garbage_buffer = malloc(sizeof(char) * 50);
   int try_again = 0;
 
   while (1) {
     // * Clean up the terminal.
-    clear_screen();
+    clear_terminal();
     add_new_line(2);
 
     // * Display the option description.
-    fahrenheit_description();
+    kelvin_description();
     add_new_line(2);
 
     // * Display the error message.
@@ -28,12 +26,12 @@ void fahrenheit_option(void) {
 
     // * Ask the input.
     add_new_tab(1);
-    printf(" Fahrenheit (°F)     : ");
-    scanf("%s", fahrenheit_string);
+    printf(" Kelvin (°K)         : ");
+    scanf("%s", kelvin_string);
     fgets(garbage_buffer, 50, stdin);
 
     // * Check if input is valid.
-    int valid_input = check_valid_input(fahrenheit_string);
+    int valid_input = check_valid_input(kelvin_string);
     if (valid_input == 0) {
       invalid_input = 1;
       continue;
@@ -41,28 +39,25 @@ void fahrenheit_option(void) {
       invalid_input = 0;
     }
 
-    // * Convert the fahrenheit string input to double.
-    double fahrenheit_double = atof(fahrenheit_string);
+    // * Convert the kelvin string input to double..
+    double kelvin_double = atof(kelvin_string);
 
     // * Handle computation for celsius scale.
-    double celsius = (fahrenheit_double - 32) * (5.0 / 9.0);
+    double celsius = kelvin_double - 273.15;
     add_new_tab(1);
-    printf(" %sCelsius (°C)%s        : %s%.4lf (°C)%s ", BLUE, RESET, YELLOW,
-           celsius, RESET);
+    printf(" %sCelsius (°C)%s        : %s%.4lf (°C)%s ", BLUE, RESET, YELLOW, celsius, RESET);
     add_new_line(1);
 
-    // * Handle computation for kelvin scale.
-    double kelvin = (fahrenheit_double - 32) * (5.0 / 9.0) + 273.15;
+    // * Handle computation for fahrenheit scale.
+    double fahrenheit = (kelvin_double - 273.15) * (9.0 / 5.0) + 32;
     add_new_tab(1);
-    printf(" %sKelvin (°K)%s         : %s%.4lf (°K)%s", BLUE, RESET, YELLOW,
-           kelvin, RESET);
+    printf(" %sFahrenheit (°F)%s     : %s%.4lf (°F)%s", BLUE, RESET, YELLOW, fahrenheit, RESET);
     add_new_line(1);
 
     // * Handle computation for rankine scale.
-    double rankine = fahrenheit_double + 459.67;
+    double rankine = kelvin_double * 1.8;
     add_new_tab(1);
-    printf(" %sRankine (°R)%s        : %s%.4lf (°R)%s", BLUE, RESET, YELLOW,
-           rankine, RESET);
+    printf(" %sRankine (°R)%s        : %s%.4lf (°R)%s", BLUE, RESET, YELLOW, rankine, RESET);
     add_new_line(2);
 
     // * Ask user if want to try again.

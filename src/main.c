@@ -1,13 +1,10 @@
-#include "displays/app_description.h"
-#include "displays/app_option_error.h"
-#include "displays/app_options.h"
-#include "displays/clear_screen.h"
-#include "displays/escape_sequence.h"
-#include "inputs/app_option.h"
-#include "scales/celsius_option.h"
-#include "scales/fahrenheit_option.h"
-#include "scales/kelvin_option.h"
-#include "scales/rankine_option.h"
+#include "displays/displays.h"
+#include "utils/utils.h"
+#include "inputs/inputs.h"
+#include "scales/celsius/celsius.h"
+#include "scales/fahrenheit/fahrenheit.h"
+#include "scales/kelvin/kelvin.h"
+#include "scales/rankine/rankine.h"
 
 int main(void) {
   int option;
@@ -15,7 +12,7 @@ int main(void) {
 
   while (1) {
     // * Clean up the screen.
-    clear_screen();
+    clear_terminal();
     add_new_line(2);
 
     // * Show the app description.
