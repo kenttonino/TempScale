@@ -1,6 +1,6 @@
 #include "displays/displays.h"
 #include "utils/utils.h"
-#include "inputs/app_option.h"
+#include "inputs/inputs.h"
 #include "scales/celsius_option.h"
 #include "scales/fahrenheit_option.h"
 #include "scales/kelvin_option.h"
