@@ -1,5 +1,5 @@
-#ifndef CELSIUS_OPTION_H
-#define CELSIUS_OPTION_H
+#ifndef CELSIUS_H
+#define CELSIUS_H
 #include "celsius_option.c"
 
 extern void celsius_option(void);

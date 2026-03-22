@@ -1,10 +1,10 @@
 #include "displays/displays.h"
 #include "utils/utils.h"
 #include "inputs/inputs.h"
-#include "scales/celsius_option.h"
-#include "scales/fahrenheit_option.h"
-#include "scales/kelvin_option.h"
-#include "scales/rankine_option.h"
+#include "scales/celsius/celsius.h"
+#include "scales/fahrenheit/fahrenheit.h"
+#include "scales/kelvin/kelvin.h"
+#include "scales/rankine/rankine.h"
 
 int main(void) {
   int option;
