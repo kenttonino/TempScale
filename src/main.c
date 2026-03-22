@@ -1,6 +1,4 @@
-#include "displays/app_description.h"
-#include "displays/app_option_error.h"
-#include "displays/app_options.h"
+#include "displays/displays.h"
 #include "utils/utils.h"
 #include "inputs/app_option.h"
 #include "scales/celsius_option.h"
