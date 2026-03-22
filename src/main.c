@@ -2,7 +2,6 @@
 #include "displays/app_option_error.h"
 #include "displays/app_options.h"
 #include "utils/utils.h"
-#include "displays/escape_sequence.h"
 #include "inputs/app_option.h"
 #include "scales/celsius_option.h"
 #include "scales/fahrenheit_option.h"

@@ -1,5 +1,4 @@
 #include "../utils/utils.h"
-#include "escape_sequence.h"
 
 void app_options(void) {
   // * Celsius option.

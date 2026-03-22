@@ -1,7 +1,11 @@
 #ifndef UTILS_H
 #define UTILS_H
 #include "clear_terminal.c"
+#include "add_new_line.c"
+#include "add_new_tab.c"
 
+extern void add_new_line(int num_lines);
+extern void add_new_tab(int num_tabs);
 extern void clear_terminal(void);
 
 // ASCII color codes.

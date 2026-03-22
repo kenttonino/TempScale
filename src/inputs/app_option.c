@@ -1,5 +1,4 @@
 #include "../utils/utils.h"
-#include "../displays/escape_sequence.h"
 
 int app_option(void) {
   int option = 0;

@@ -1,5 +1,4 @@
 #include "../utils/utils.h"
-#include "../displays/escape_sequence.h"
 #include "celsius_description.h"
 #include "check_valid_input.h"
 

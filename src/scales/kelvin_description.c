@@ -1,5 +1,4 @@
 #include "../utils/utils.h"
-#include "../displays/escape_sequence.h"
 
 void kelvin_description(void) {
   add_new_tab(1);
