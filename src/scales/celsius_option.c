@@ -1,4 +1,4 @@
-#include "../displays/ansi_color_codes.h"
+#include "../utils/utils.h"
 #include "../displays/clear_screen.h"
 #include "../displays/escape_sequence.h"
 #include "celsius_description.h"

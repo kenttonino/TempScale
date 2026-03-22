@@ -1,4 +1,4 @@
-#include "../displays/ansi_color_codes.h"
+#include "../utils/utils.h"
 #include "../displays/clear_screen.h"
 #include "../displays/escape_sequence.h"
 #include "check_valid_input.h"
