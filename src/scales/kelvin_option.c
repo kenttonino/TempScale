@@ -47,22 +47,19 @@ void kelvin_option(void) {
     // * Handle computation for celsius scale.
     double celsius = kelvin_double - 273.15;
     add_new_tab(1);
-    printf(" %sCelsius (°C)%s        : %s%.4lf (°C)%s ", BLUE, RESET, YELLOW,
-           celsius, RESET);
+    printf(" %sCelsius (°C)%s        : %s%.4lf (°C)%s ", BLUE, RESET, YELLOW, celsius, RESET);
     add_new_line(1);
 
     // * Handle computation for fahrenheit scale.
     double fahrenheit = (kelvin_double - 273.15) * (9.0 / 5.0) + 32;
     add_new_tab(1);
-    printf(" %sFahrenheit (°F)%s     : %s%.4lf (°F)%s", BLUE, RESET, YELLOW,
-           fahrenheit, RESET);
+    printf(" %sFahrenheit (°F)%s     : %s%.4lf (°F)%s", BLUE, RESET, YELLOW, fahrenheit, RESET);
     add_new_line(1);
 
     // * Handle computation for rankine scale.
     double rankine = kelvin_double * 1.8;
     add_new_tab(1);
-    printf(" %sRankine (°R)%s        : %s%.4lf (°R)%s", BLUE, RESET, YELLOW,
-           rankine, RESET);
+    printf(" %sRankine (°R)%s        : %s%.4lf (°R)%s", BLUE, RESET, YELLOW, rankine, RESET);
     add_new_line(2);
 
     // * Ask user if want to try again.
