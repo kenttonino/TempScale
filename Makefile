@@ -1,3 +1,5 @@
+.PHONY: build debug run
+
 build:
 	gcc -g -Werror -Wfatal-errors -Wpedantic -pedantic-errors -Wall -o bin/tempscale src/main.c
 
