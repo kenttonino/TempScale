@@ -1,7 +1,7 @@
 #include "displays/app_description.h"
 #include "displays/app_option_error.h"
 #include "displays/app_options.h"
-#include "displays/clear_screen.h"
+#include "utils/utils.h"
 #include "displays/escape_sequence.h"
 #include "inputs/app_option.h"
 #include "scales/celsius_option.h"
@@ -15,7 +15,7 @@ int main(void) {
 
   while (1) {
     // * Clean up the screen.
-    clear_screen();
+    clear_terminal();
     add_new_line(2);
 
     // * Show the app description.

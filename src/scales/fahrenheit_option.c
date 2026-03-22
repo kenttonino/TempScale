@@ -1,5 +1,4 @@
 #include "../utils/utils.h"
-#include "../displays/clear_screen.h"
 #include "../displays/escape_sequence.h"
 #include "check_valid_input.h"
 #include "fahrenheit_description.h"
@@ -12,7 +11,7 @@ void fahrenheit_option(void) {
 
   while (1) {
     // * Clean up the terminal.
-    clear_screen();
+    clear_terminal();
     add_new_line(2);
 
     // * Display the option description.

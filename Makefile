@@ -1,4 +1,4 @@
-.PHONY: build debug run
+.PHONY: build run-debug run-valgrind run
 
 build:
 	gcc -g -Werror -Wfatal-errors -Wpedantic -pedantic-errors -Wall -o bin/tempscale src/main.c

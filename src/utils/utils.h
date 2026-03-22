@@ -1,5 +1,8 @@
 #ifndef UTILS_H
 #define UTILS_H
+#include "clear_terminal.c"
+
+extern void clear_terminal(void);
 
 // ASCII color codes.
 #define BLUE "\033[0;34m"
