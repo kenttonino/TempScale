@@ -74,4 +74,7 @@ void rankine_option(void) {
       break;
     }
   }
+
+  free(rankine_string);
+  free(garbage_buffer);
 }
