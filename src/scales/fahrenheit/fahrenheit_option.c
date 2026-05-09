@@ -74,4 +74,7 @@ void fahrenheit_option(void) {
       break;
     }
   }
+
+  free(fahrenheit_string);
+  free(garbage_buffer);
 }
