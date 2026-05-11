@@ -14,13 +14,21 @@
 
 ## Local Development
 
-```sh
-# Build the main file.
-make build
+> - Install [GNU Make](https://www.gnu.org/software/make/), [GNU GCC](https://gcc.gnu.org/), [GDB](https://sourceware.org/gdb/), and [Valgrind](https://valgrind.org/).
 
-# Run the CLI tool.
+> - Below are the necessary scripts for this project.
+
+```sh
+# This will build and run the program.
 make run
 
-# Run the CLI tool with GNU Debugger.
-make debug
+# This will build the test files and run the specific test.
+# Check the corresponding executable file.
+make run-test bin="inputs_test"
+
+# This will build and run the program in GDB.
+make run-debug
+
+# This will build and run the program in Valgrind.
+make run-valgrind
 ```

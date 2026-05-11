@@ -10,7 +10,7 @@ build-test:
 	gcc -g ${WARNING_FLAGS} -o ./bin/__tests__/scales_test ./src/scales/__tests__/scales_test.c
 
 run-test: build-test
-	# E.g. make run-test bin="input_test"
+	# E.g. make run-test bin="inputs_test"
 	./bin/__tests__/${bin}
 
 run-debug: build
