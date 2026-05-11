@@ -23,7 +23,7 @@
 make run
 
 # This will build the test files and run the specific test.
-# Check the corresponding executable file.
+# Refer to the bin/__tests__/* directory.
 make run-test bin="inputs_test"
 
 # This will build and run the program in GDB.
