@@ -1,5 +1,5 @@
 # Suppress diagnostics for test files.
-if:
+If:
   PathMatch: src/.*/__tests__/*
 
 Diagnostics:
