@@ -19,3 +19,6 @@ jobs:
 
     - name: Test Inputs Functions
       run: make run-test bin="inputs_test"
+
+    - name: Test Scales Functions
+      run: make run-test bin="scales_test"
