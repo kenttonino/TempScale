@@ -26,9 +26,9 @@ make run
 # Refer to the bin/__tests__/* directory.
 make run-test bin="inputs_test"
 
-# This will build and run the program in GDB.
+# This will build and run the program using GDB.
 make run-debug
 
-# This will build and run the program in Valgrind.
+# This will build and run the program using Valgrind.
 make run-valgrind
 ```
