@@ -14,7 +14,7 @@
 
 ## Local Development
 
-> - Install [GNU Make](https://www.gnu.org/software/make/), [GNU GCC](https://gcc.gnu.org/), [GDB](https://sourceware.org/gdb/), and [Valgrind](https://valgrind.org/).
+> - Install [GNU Make](https://www.gnu.org/software/make/), [GNU GCC](https://gcc.gnu.org/), [GNU GDB](https://sourceware.org/gdb/), and [Valgrind](https://valgrind.org/).
 
 > - Below are the necessary scripts for this project.
 
