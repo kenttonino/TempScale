@@ -10,7 +10,15 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+
     - name: Checkout Repository
       uses: actions/checkout@v4
+
     - name: Build
       run: make build
+
+    - name: Test Inputs Functions
+      run: make run-test bin="inputs_test"
+
+    - name: Test Scales Functions
+      run: make run-test bin="scales_test"
